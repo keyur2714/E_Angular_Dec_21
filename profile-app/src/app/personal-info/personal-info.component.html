@@ -1,0 +1,56 @@
+<table class="table table-bordered bg-dark text-info">
+    <thead>
+        <tr>
+            <th>First Name : </th>
+            <td>{{firstName}}</td>
+        </tr>
+        <tr>
+            <th>Last Name : </th>
+            <td>{{lastName}}</td>
+        </tr>
+        <tr>
+            <th>Mobile No : </th>
+            <td>{{mobileNo}}</td>
+        </tr>
+        <tr>
+            <th>Email : </th>
+            <td>{{email}}</td>
+        </tr>
+        <tr>
+            <th>Age : </th>
+            <td>{{age}}</td>
+        </tr>
+        <tr>
+            <th>Date Of Birth : </th>
+            <td>{{dateOfBirth | date : 'dd-MM-yyyy'}}</td>
+        </tr>
+    </thead>
+</table>
+<table class="table table-bordered bg-dark text-warning">
+    <thead>
+        <tr>
+            <th>First Name : </th>
+            <td>{{personalInfo.firstName}}</td>
+        </tr>
+        <tr>
+            <th>Last Name : </th>
+            <td>{{personalInfo.lastName}}</td>
+        </tr>
+        <tr>
+            <th>Mobile No : </th>
+            <td>{{personalInfo.mobileNo}}</td>
+        </tr>
+        <tr>
+            <th>Email : </th>
+            <td>{{personalInfo.email}}</td>
+        </tr>
+        <tr>
+            <th>Age : </th>
+            <td>{{personalInfo.age}}</td>
+        </tr>
+        <tr>
+            <th>Date Of Birth : </th>
+            <td>{{personalInfo.dateOfBirth | date : 'dd-MM-yyyy'}}</td>
+        </tr>
+    </thead>
+</table>

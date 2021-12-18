@@ -1,0 +1,13 @@
+<!-- <ul>
+    <li>{{friendList[0]}}</li>
+    <li>{{friendList[1]}}</li>
+    <li>{{friendList[2]}}</li>
+    <li>{{friendList[3]}}</li>
+    <li>{{friendList[4]}}</li>
+</ul> -->
+<ul>
+    <li *ngFor="let name of friendList;let i=index">
+        <span *ngIf="i === 2">{{name | uppercase}}</span>
+        <span *ngIf="i !== 2">{{name}}</span>        
+    </li>
+</ul>
