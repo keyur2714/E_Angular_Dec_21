@@ -1,0 +1,20 @@
+<table class="table table-bordered bg-dark text-light">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Education</th>
+            <th>Board/University</th>
+            <th>Average Percentage</th>
+            <th>Grade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let education of educationList">
+            <td>{{education.id}}</td>
+            <td>{{education.education}}</td>
+            <td>{{education.boardOrUniversity}}</td>
+            <td>{{education.averagePercentage}}</td>
+            <td>{{education.grade}}</td>
+        </tr>
+    </tbody>
+</table>

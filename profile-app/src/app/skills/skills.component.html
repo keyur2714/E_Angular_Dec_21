@@ -1,0 +1,18 @@
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Skill Type</th>
+            <th>Skill Sets</th>
+        </tr>        
+    </thead>
+    <tbody>
+        <tr *ngFor="let skill of skillList">
+            <td>{{skill.skillType}}</td>
+            <td>                
+                    <li *ngFor="let sk of skill.skillSets">
+                        {{sk}}
+                    </li>                
+            </td>
+        </tr>
+    </tbody>
+</table>
