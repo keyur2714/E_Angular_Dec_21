@@ -1,0 +1,20 @@
+<div class="row m-1">
+    <div class="col">
+        Enter any String : 
+    </div>
+    <div class="col">
+        <input type="text" name=str [(ngModel)]="str" class="form-control">
+    </div>
+</div>
+<div class="row m-1">
+    <div class="col">
+        <button class="btn btn-info m-1" (click)="reverse()">Reverse</button>
+        <button class="btn btn-success m-1" (click)="upper()">ToUpper</button>
+        <button class="btn btn-danger m-1" (click)="lower()">ToLower</button>
+    </div>
+</div>
+<div class="row m-1">
+    <div class="col">
+        Result Is : {{result}}
+    </div>
+</div>

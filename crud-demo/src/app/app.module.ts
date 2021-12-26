@@ -3,14 +3,12 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { CalcComponent } from './calc/calc.component';
-import { StringCalcComponent } from './string-calc/string-calc.component';
+import { FriendsComponent } from './friends/friends.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CalcComponent,
-    StringCalcComponent
+    FriendsComponent
   ],
   imports: [
     BrowserModule,

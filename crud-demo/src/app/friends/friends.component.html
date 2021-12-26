@@ -1,0 +1,70 @@
+<div class="row m-1">
+    <div class="col-sm-2">
+        Id : 
+    </div>
+    <div class="col-sm-2">
+        <input type="text" name=id class="form-control" [(ngModel)]="newFriend.id">
+    </div>
+</div>
+<div class="row m-1">
+    <div class="col-sm-2">
+        Name : 
+    </div>
+    <div class="col-sm-2">
+        <input type="text" name=name class="form-control" [(ngModel)]="newFriend.name">
+    </div>
+</div>
+<div class="row m-1">
+    <div class="col-sm-2">
+        Mobile No : 
+    </div>
+    <div class="col-sm-2">
+        <input type="text" name=mobileNo class="form-control" [(ngModel)]="newFriend.mobileNo">
+    </div>
+</div>
+<div class="row m-1">
+    <div class="col-sm-2">
+        Date Of Birth : 
+    </div>
+    <div class="col-sm-2">
+        <input type="text" name=dateOfBirth class="form-control" placeholder="yyyy-mm-dd" [(ngModel)]="newFriend.dateOfBirth">
+    </div>
+</div>
+<div class="row m-1">
+    <div class="col">
+        <button class="btn btn-info m-1" (click)="save()" *ngIf="updateIdx === -1">Save</button>
+        <button class="btn btn-info m-1" (click)="update()" *ngIf="updateIdx !== -1">Update</button>
+        <button class="btn btn-secondary m-1" (click)="clear()">Reset</button>
+    </div>
+</div>
+
+<div class="card">    
+    <div class="card-header bg-dark text-warning">
+        Manage Friends
+    </div>
+    <div class="card-body">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>MobileNo</th>
+                    <th>DateOfBirth</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let friend of friendList;let i=index">
+                    <td>{{friend.id}}</td>
+                    <td>{{friend.name}}</td>
+                    <td>{{friend.mobileNo}}</td>
+                    <td>{{friend.dateOfBirth | date : 'dd-MMM-yyyy'}}</td>
+                    <td>
+                        <button class="btn btn-success m-1" (click)="edit(i)">Edit</button>
+                        <button class="btn btn-danger m-1" (click)="delete(i)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
