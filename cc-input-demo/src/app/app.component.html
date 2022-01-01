@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row m-1">
+    <h1>
+      @Input Demo
+    </h1>
+  </div>
+  <div class="row m-1">
+    <div class="col">
+      <app-message></app-message>
+    </div>
+    <div class="col">
+      <app-message message="Happy New Year...!"></app-message>
+    </div>
+    <div class="col">
+      <app-message [message]="message"></app-message>
+    </div>
+    <div class="col">
+      <app-message [message]="'Hi'"></app-message>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+          <app-message *ngFor="let mg of messageList" [message]="mg"></app-message>        
+    </div>
+  </div>
+  <div class="row m-1">
+    <div class="col-sm-6">
+      <app-personal-info
+        bg-color="danger"
+        text-color="white"
+      >
+      </app-personal-info>
+    </div>
+    <div class="col-sm-6">
+      <app-personal-info
+        first-name="Denish"
+        last-name="Patel"
+        date-of-birth="1985-05-24"
+        mobile-number="9825216383"
+      >
+      </app-personal-info>
+    </div>
+  </div>
+  <div class="row m-1">
+    <div class="col-sm-6">
+      <app-personal-info 
+        [first-name]="friend.firstName"
+        [last-name]="friend.lastName"
+        [date-of-birth]="friend.dateOfBirth"
+        [mobile-number]="friend.mobileNo"
+        bg-color="success"
+        text-color="dark"
+      > 
+      </app-personal-info>
+    </div>
+  </div>
+</div>
