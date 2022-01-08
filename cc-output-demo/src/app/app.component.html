@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row m-1">
+    <div class="col">
+      <h1>@Output Demo</h1>
+    </div>
+  </div>
+  <div class="row m-1">
+    <div class="col">
+      <app-message (reverse-message)="getMsg1($event)"></app-message>
+    </div>
+    <div class="col">
+      <app-message message="Good Afternoon...!" (reverse-message)="getMsg2($event)"></app-message>
+    </div>
+  </div>
+  <div class="row m-1">
+    <div class="col">
+      {{revMsg1}}
+    </div>
+    <div class="col">
+      {{revMsg2}}
+    </div>
+  </div>
+</div>
