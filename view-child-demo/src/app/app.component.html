@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row m-1">
+    <div class="col">
+      <p #title>@View Child Demo</p>
+    </div>
+  </div>
+  <div class="row m-1">
+    <div class="col">
+      <h1 #msg>Hello Radhe Krishna...!</h1>
+    </div>    
+    <div class="col">
+      <button class="btn btn-info" (click)="changeStyle()">Change Style</button>
+    </div>
+  </div>
+  <div class="row m-1">
+    <div class="col">
+      Enter Any String : 
+    </div>
+    <div class="col">
+      <input type="text" name=s #ss class="form-control">
+    </div>
+  </div>
+  <div class="row m-1">
+    <div class="col">
+      <button class="btn btn-info m-1" (click)="action('u')">Upper</button>
+      <button class="btn btn-warning m-1" (click)="action('l')">Lower</button>
+      <button class="btn btn-success m-1" (click)="action('r')">Reverse</button>
+    </div>
+    <div class="col">
+      <span #result></span>
+    </div>
+    <div class="col">
+      <app-string-util></app-string-util>
+    </div>
+  </div>
+</div>

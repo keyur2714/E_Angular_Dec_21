@@ -1,3 +1,4 @@
+<label><ng-content></ng-content></label>
 <select [name]="name" class="form-control" [(ngModel)]="selectedItem" (change)="returnSelectedItem()">
     <option value="-1">-:{{label}}:-</option>
     <option *ngFor="let data of dataList" [ngValue]="data">{{data.name}}</option>
