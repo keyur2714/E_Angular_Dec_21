@@ -1,0 +1,71 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "keyurjava27@gmail.com",
+      "name": "keyur thakor",
+      "password": "India@123",
+      "role": "ADMIN",
+      "token": "abcd1234444"
+    },
+    {
+      "id": 2,
+      "username": "denishjava26@gmail.com",
+      "name": "denish patel",
+      "password": "Bharat@123",
+      "role": "USER",
+      "token": "ABCD1234444"
+    }
+  ],
+  "students": [
+    {
+      "id": 32,
+      "name": "keyur",
+      "city": "surat",
+      "mobileNo": "7387029671",
+      "email": "keyurjava27@gmail.com"
+    },
+    {
+      "id": 26,
+      "name": "denish",
+      "city": "mumbai",
+      "mobileNo": "7387029818",
+      "email": "denishjava26@gmail.com"
+    },
+    {
+      "id": 44,
+      "name": "vinit",
+      "city": "surat",
+      "mobileNo": "7387029787",
+      "email": "vinit.shah44@gmail.com"
+    },
+    {
+      "id": 28,
+      "name": "hiren",
+      "city": "Navsari",
+      "mobileNo": "7387029312",
+      "email": "hiren28@gmail.com"
+    },
+    {
+      "id": "24",
+      "name": "Darsh",
+      "city": "Bardoli",
+      "mobileNo": "9898121212",
+      "email": "darsh.bardoli@gmail.com"
+    },
+    {
+      "id": "45",
+      "name": "Ashvini Thakor",
+      "city": "pune",
+      "mobileNo": "9898712121",
+      "email": "keyurjava27@gmail.com"
+    },
+    {
+      "id": "54",
+      "name": "piyush",
+      "mobileNo": "8989122332",
+      "email": "piyush.desai@gmail.com",
+      "city": "surat"
+    }
+  ]
+}

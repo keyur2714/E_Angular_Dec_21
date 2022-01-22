@@ -1,0 +1,44 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "Keyur Thakor",
+      "address": "Alcove Society,Pimple Saudagar",
+      "city": "Pune",
+      "contact": [
+        {
+          "mobileNo": "7387029671",
+          "email": "keyurjava27@gmail.com"
+        },
+        {
+          "mobileNo": "8600712121",
+          "email": "keyur.555kn@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Denish Patel",
+      "address": "Jiao,Surat",
+      "city": "Surat",
+      "contact": [
+        {
+          "mobileNo": "7387029121",
+          "email": "denishjava26@gmail.com"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Darsh Vashi",
+      "address": "Nadod Village",
+      "city": "Navsari",
+      "contact": [
+        {
+          "mobileNo": "7387029999",
+          "email": "darshvashi26@gmail.com"
+        }
+      ]
+    }
+  ]
+}

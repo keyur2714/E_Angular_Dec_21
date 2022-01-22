@@ -1,0 +1,69 @@
+{
+  "users": [
+    {
+      "id": 11,
+      "username": "keyur",
+      "password": "India@123",
+      "role": "ADMIN",
+      "token": "AAAAAAAAAAAAAAAAAASSSSSSSSS"
+    },
+    {
+      "id": 12,
+      "username": "denish",
+      "password": "Bharat@123",
+      "role": "USER",
+      "token": "BBBBBBBBBBBBBSSSSSSSSS"
+    }
+  ],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Keyur",
+      "city": "Pune",
+      "salary": 11111,
+      "designation": "Software Engineer"
+    },
+    {
+      "id": 2,
+      "name": "Denish",
+      "city": "Surat",
+      "salary": 11112,
+      "designation": "Software Engineer"
+    },
+    {
+      "id": 4,
+      "name": "Piyush",
+      "city": "Bardoli",
+      "salary": 12111,
+      "designation": "Technical Manager"
+    },
+    {
+      "id": "3",
+      "name": "vinit",
+      "city": "surat",
+      "salary": "12121",
+      "designation": "manager"
+    },
+    {
+      "id": "5",
+      "name": "sandip",
+      "city": "bardoli",
+      "salary": "50000",
+      "designation": "sales manager"
+    },
+    {
+      "id": "7",
+      "name": "Ami",
+      "city": "pune",
+      "salary": "70000",
+      "designation": "Manager"
+    },
+    {
+      "id": "8",
+      "name": "vicky",
+      "city": "Bombay",
+      "salary": "30000",
+      "designation": "Manager"
+    }
+  ]
+}

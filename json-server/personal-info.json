@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "keyur",
+      "name": "keyur thakor",
+      "password": "India@123",
+      "role": "ADMIN",
+      "token": "abcd1234444"
+    },
+    {
+      "id": 2,
+      "username": "denish",
+      "name": "denish patel",
+      "password": "Bharat@123",
+      "role": "USER",
+      "token": "ABCD1234444"
+    }
+  ],
+  "personList": [
+    {
+      "id": 27,
+      "firstName": "keyursinh",
+      "lastName": "Thakor",
+      "gender": "M",
+      "mobileNo": "7387029671",
+      "email": "keyurjava27@gmail.com",
+      "city": "pune"
+    },
+    {
+      "id": 26,
+      "firstName": "denish",
+      "lastName": "patel",
+      "gender": "M",
+      "mobileNo": "9898012124",
+      "email": "denishjava26@gmail.com",
+      "city": "mumbail"
+    },
+    {
+      "id": 44,
+      "firstName": "vinit",
+      "lastName": "shah",
+      "gender": "M",
+      "mobileNo": "9879534778",
+      "email": "vinit2cute@gmail.com",
+      "city": "surat"
+    },
+    {
+      "id": "4",
+      "firstName": "ami",
+      "lastName": "thakor",
+      "gender": "F",
+      "mobileNo": "8600712124",
+      "email": "dave.12@gmail.com",
+      "city": "bharuch"
+    }
+  ]
+}

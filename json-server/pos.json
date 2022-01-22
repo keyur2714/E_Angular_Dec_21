@@ -1,0 +1,56 @@
+{
+	"users": [
+		{
+		  "id": 11,
+		  "username": "keyur",
+		  "password": "India@123",
+		  "role": "ADMIN",
+		  "token": "AAAAAAAAAAAAAAAAAASSSSSSSSS"
+		},
+		{
+		  "id": 12,
+		  "username": "denish",
+		  "password": "Bharat@123",
+		  "role": "USER",
+		  "token": "BBBBBBBBBBBBBSSSSSSSSS"
+		}
+	],
+	"products": [
+		{
+			"id": 1,
+			"code": "TEA",
+			"name": "Ginger Tea",
+			"unitPrice": 10
+		},
+		{
+			"id": 2,
+			"code": "MTEAT",
+			"name": "Massala Tea",
+			"unitPrice": 15
+		},
+		{
+			"id": 3,
+			"code": "COFFEE",
+			"name": "Hot COFFEE",
+			"unitPrice": 20
+		},
+		{
+			"id": 4,
+			"code": "PH",
+			"name": "Pohe",
+			"unitPrice": 20
+		},
+		{
+			"id": 5,
+			"code": "CR",
+			"name": "Cream Roll",
+			"unitPrice": 10
+		},
+		{
+			"id": 6,
+			"code": "VP",
+			"name": "Veg Puff",
+			"unitPrice": 15
+		}
+	]
+}
