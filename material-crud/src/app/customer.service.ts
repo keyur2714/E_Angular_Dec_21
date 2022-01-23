@@ -14,4 +14,20 @@ export class CustomerService {
   getAllCustomers() : Observable<Customer[]>  {
     return this.httpClient.get<Customer[]>(this.url+'/customers');
   }
+
+  saveCustomer(customer : Customer) : Observable<Customer> {
+    return this.httpClient.post<Customer>(this.url+"/customers",customer);
+  }
+
+  getCustomerById(id : number) : Observable<Customer>  {
+    return this.httpClient.get<Customer>(this.url+'/customers/'+id);
+  }
+
+  updateCustomer(customer : Customer,id : number) : Observable<Customer> {
+    return this.httpClient.put<Customer>(this.url+"/customers/"+id,customer);
+  }
+
+  deleteCustomerById(id : number) : Observable<void> {
+    return this.httpClient.delete<void>(this.url+"/customers/"+id);
+  }
 }

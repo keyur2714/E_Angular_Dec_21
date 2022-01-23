@@ -7,12 +7,16 @@ import { CustomersComponent } from './customers/customers.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
-
+import { FormsModule } from '@angular/forms';
+import { CustomerEntryComponent } from './customer-entry/customer-entry.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     AppComponent,
-    CustomersComponent
+    CustomersComponent,
+    CustomerEntryComponent
   ],
   imports: [
     BrowserModule,
@@ -20,8 +24,11 @@ import { MatFormFieldModule, MatLabel } from '@angular/material/form-field';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatFormFieldModule,        
-    HttpClientModule
+    MatFormFieldModule,            
+    HttpClientModule,
+    FormsModule,
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

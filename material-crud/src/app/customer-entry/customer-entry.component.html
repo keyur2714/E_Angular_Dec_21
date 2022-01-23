@@ -1,0 +1,40 @@
+<div>
+<form #frm=ngForm (ngSubmit)="save(frm)">
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Customer Id"
+        [(ngModel)]="customer.id" name="customerId" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Customer Name"
+        [(ngModel)]="customer.name" name="customerName" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Address"
+        [(ngModel)]="customer.address" name="address" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="City"
+        [(ngModel)]="customer.city" name="city" required>
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Mobile No"
+        [(ngModel)]="mobileNo" name="mobileNo" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Email"
+        [(ngModel)]="email" name="email" required>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" *ngIf="editId === -1" [disabled]="frm.invalid">Submit</button>    
+    <button type=button mat-raised-button color="primary" *ngIf="editId !== -1" [disabled]="frm.invalid" (click)="update(frm)">Update</button>    
+</form>
+</div>
+<div>
+    <app-customers (getEventData)="getData($event)"></app-customers>
+</div>
