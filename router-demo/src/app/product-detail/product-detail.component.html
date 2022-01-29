@@ -1,0 +1,25 @@
+<div>
+    <table  class="mat-elevation-z8" border="1px">
+        <thead>
+            <tr>
+                <th>Prodcut Id</th>
+                <td>{{product.id}}</td>
+            </tr>
+            <tr>
+                <th>Prodcut Name</th>
+                <td>{{product.name}}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{product.unitPrice}}</td>
+            </tr>
+            <tr>
+                <th>Prodcut Quantity</th>
+                <td>{{product.quantity}}</td>
+            </tr>
+        </thead>
+    </table>
+</div>
+<div style="text-align: center;">
+    <button mat-raised-button color="warn" (click)="back()">Back</button>
+</div>

@@ -1,0 +1,22 @@
+{
+	"products": [
+		{
+			"id":1,
+			"name":"Ginger Tea",
+			"unitPrice":10,
+			"quantity":100
+		},
+		{
+			"id":2,
+			"name":"Coffee",
+			"unitPrice":15,
+			"quantity":100
+		},
+		{
+			"id":3,
+			"name":"Cold Coffee",
+			"unitPrice":20,
+			"quantity":100
+		}
+	]
+}
