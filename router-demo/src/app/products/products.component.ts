@@ -18,11 +18,15 @@ export class ProductsComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatTable, {static: false}) table: MatTable<Product>;
 
-  displayedColumns = ['id', 'name', 'unitPrice', 'quantity'];
+  displayedColumns = ['id', 'name', 'unitPrice', 'quantity', 'action'];
 
   constructor(private productService : ProductService) { }
 
   ngOnInit(): void {
+    this.getAllProducts();
+  }
+
+  getAllProducts() : void {
     this.productService.getAllProducts().subscribe(
       (data : Product[])=>{        
         this.dataSource.data = data; 
@@ -45,6 +49,18 @@ export class ProductsComponent implements OnInit {
 
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
+    }
+  }
+
+  delete(id : number) : void {
+    let confirmMsg = confirm("Are you sure want to delete product with Id : "+id+" ?");
+    if(confirmMsg) {
+      this.productService.deleteProductById(id).subscribe(
+        ()=>{
+          alert("Product Deleted successfully with id : "+id);
+          this.getAllProducts();
+        }
+      )
     }
   }
 

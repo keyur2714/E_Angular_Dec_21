@@ -27,6 +27,10 @@ import { MatSortModule } from '@angular/material/sort';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductEntryComponent } from './product-entry/product-entry.component';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +40,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     AboutUsComponent,
     ContactUsComponent,
     ProductsComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ProductEntryComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +61,10 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     MatMenuModule,
     MatFormFieldModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule,
+    MatRadioModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

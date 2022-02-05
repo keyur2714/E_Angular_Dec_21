@@ -19,4 +19,16 @@ export class ProductService {
   getProductDetailById(id : number) : Observable<Product> {
     return this.httpClient.get<Product>(this.url+'/products/'+id);
   }
+
+  saveProduct(product : Product) : Observable<Product> {
+    return this.httpClient.post<Product>(this.url+'/products',product);
+  }
+
+  updateProduct(product : Product) : Observable<Product> {
+    return this.httpClient.put<Product>(this.url+'/products/'+product.id,product);
+  }
+
+  deleteProductById(id : number) : Observable<void> {
+    return this.httpClient.delete<void>(this.url+"/products/"+id);
+  }
 }

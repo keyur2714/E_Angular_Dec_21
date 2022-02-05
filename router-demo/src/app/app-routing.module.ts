@@ -5,6 +5,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductEntryComponent } from './product-entry/product-entry.component';
 import { ProductsComponent } from './products/products.component';
 
 const routes: Routes = [  
@@ -17,7 +18,9 @@ const routes: Routes = [
   {path : 'dashboard' , component : DashboardComponent},
   {path : 'contact-us' , component : ContactUsComponent},
   {path : 'about-us' , component : AboutUsComponent},
-  {path : 'product-detail/:id',component : ProductDetailComponent}
+  {path : 'product-detail/:id',component : ProductDetailComponent},
+  {path : 'add-product', component : ProductEntryComponent},
+  {path : 'edit-product/:id', component : ProductEntryComponent},
 ];
 
 @NgModule({

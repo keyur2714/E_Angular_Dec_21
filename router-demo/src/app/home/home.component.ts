@@ -16,4 +16,8 @@ export class HomeComponent implements OnInit {
   manageProducts() : void {
     this.router.navigate(['home/products']);
   }
+
+  addProducts() : void {
+    this.router.navigate(['add-product']);
+  }
 }

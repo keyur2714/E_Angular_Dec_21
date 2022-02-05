@@ -1,0 +1,55 @@
+<form [formGroup]="productForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>Product Information</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>      
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Product ID" formControlName="id">
+            <mat-error *ngIf="productForm.controls['id'].hasError('required')">
+              Product Id is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Product Name" formControlName="name">
+            <mat-error *ngIf="productForm.controls['name'].hasError('required')">
+              Product name is <strong>required</strong>
+            </mat-error>
+            <mat-error *ngIf="productForm.controls['name'].hasError('minlength')">
+              Product name is min 3 Char
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <textarea matInput placeholder="Price" formControlName="unitPrice"></textarea>
+            <mat-error *ngIf="productForm.controls['unitPrice'].hasError('required')">
+              Price is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <textarea matInput placeholder="Quantity" formControlName="quantity"></textarea>
+            <mat-error *ngIf="productForm.controls['quantity'].hasError('required')">
+              Quantity is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit" *ngIf="id === -1" [disabled]="productForm.invalid">Submit</button>
+      <button mat-raised-button color="primary" type="submit" *ngIf="id !== -1" [disabled]="productForm.invalid">Update</button>
+      <button mat-raised-button color="warn" type="button" (click)="back()">Back</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
