@@ -1,0 +1,29 @@
+<h1>
+  Observable Demo
+</h1>
+<p>
+  {{seqNo}}
+</p>
+
+<button (click)="start()">Start</button>
+<br>
+<button (click)="stop()">Stop</button>
+<hr>
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>City</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of employees">
+      <td>{{emp.id}}</td>
+      <td>{{emp.name}}</td>
+      <td>{{emp.city}}</td>
+      <td>{{emp.salary}}</td>
+    </tr>
+  </tbody>
+</table>
