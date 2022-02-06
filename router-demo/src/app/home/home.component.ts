@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
+import { ProductEntryComponent } from '../product-entry/product-entry.component';
+import { ProductsComponent } from '../products/products.component';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +11,9 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router : Router) { }
+  constructor(private router : Router,public dialog: MatDialog) { }
+
+  
 
   ngOnInit(): void {
   }
@@ -20,4 +25,6 @@ export class HomeComponent implements OnInit {
   addProducts() : void {
     this.router.navigate(['add-product']);
   }
+
+  
 }

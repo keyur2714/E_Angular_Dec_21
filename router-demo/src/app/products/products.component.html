@@ -2,7 +2,7 @@
     <mat-label>Filter</mat-label>
     <input matInput (keyup)="applyFilter($event)" placeholder="Search" #input>
   </mat-form-field> 
-  
+  <button mat-raised-button style="margin-left: 10px;" color="primary" (click)="openPopup(-1)">Add Product Popup</button>    
   <div class="mat-elevation-z8">
     <table mat-table [dataSource]="dataSource" matSort>
   
@@ -34,6 +34,7 @@
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Action </th>
         <td mat-cell *matCellDef="let row">
           <button mat-flat-button color="warn" [routerLink]="['/edit-product/',row.id]">Edit</button>
+          <button mat-flat-button color="warn" (click)="openPopup(row.id)">Edit Popup</button>
           <button mat-flat-button style="float:left" color="accent" (click)="delete(row.id)">Delete</button>                          
         </td>
       </ng-container>     

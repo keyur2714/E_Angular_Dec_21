@@ -31,6 +31,7 @@ import { ProductEntryComponent } from './product-entry/product-entry.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatDialogModule} from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,6 +42,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     ContactUsComponent,
     ProductsComponent,
     ProductDetailComponent,
+    ProductEntryComponent
+  ],
+  entryComponents : [
     ProductEntryComponent
   ],
   imports: [
@@ -64,7 +68,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     MatSelectModule,
     MatRadioModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

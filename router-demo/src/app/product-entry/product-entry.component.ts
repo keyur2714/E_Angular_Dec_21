@@ -1,6 +1,7 @@
 import { Location } from '@angular/common';
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../product.service';
 import { Product } from '../products/product.model';
@@ -21,14 +22,19 @@ export class ProductEntryComponent implements OnInit,AfterViewInit{
     quantity: [null, Validators.required]    
   });
   
-  constructor(private fb: FormBuilder,private productService : ProductService,private router : Router,private location : Location,private activatedRoute : ActivatedRoute) {}
+  constructor(private fb: FormBuilder,private productService : ProductService,private router : Router,private location : Location,private activatedRoute : ActivatedRoute,
+    public dialogRef: MatDialogRef<ProductEntryComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    ) {}
 
-  ngOnInit(): void {
+  ngOnInit(): void {      
       this.activatedRoute.params.subscribe(
         (param)=>{
           this.id = param.id;
         }
       )
+      this.id = this.data.id;
+      //alert(this.id);
   }
 
   ngAfterViewInit(): void {
@@ -55,6 +61,7 @@ export class ProductEntryComponent implements OnInit,AfterViewInit{
           (data : Product)=>{
             alert("Product Created Successfully with Id "+data.id);
             this.router.navigate(['/home/products']);
+            this.dialogRef.close(this.id);
           },
           (error)=>{
           }
@@ -65,6 +72,7 @@ export class ProductEntryComponent implements OnInit,AfterViewInit{
             alert("Product Update Successfully with Id "+data.id);
             this.router.navigate(['/home/products']);
             this.id = -1;
+            this.dialogRef.close(this.id);
           },
           (error)=>{
           }

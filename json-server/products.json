@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Ginger Tea",
-      "unitPrice": "15",
+      "unitPrice": "18",
       "quantity": 100
     },
     {
@@ -16,7 +16,43 @@
       "id": 3,
       "name": "Cold Coffee",
       "unitPrice": "25",
-      "quantity": 100
+      "quantity": "151"
+    },
+    {
+      "id": "4",
+      "name": "Vej Puff",
+      "unitPrice": "20",
+      "quantity": "50"
+    },
+    {
+      "id": "5",
+      "name": "Cream Roll",
+      "unitPrice": "10",
+      "quantity": "100"
+    },
+    {
+      "id": "6",
+      "name": "Pohe",
+      "unitPrice": "20",
+      "quantity": "10"
+    },
+    {
+      "id": "7",
+      "name": "Idli",
+      "unitPrice": "20",
+      "quantity": "11"
+    },
+    {
+      "id": "8",
+      "name": "Medu vada",
+      "unitPrice": "10",
+      "quantity": "11"
+    },
+    {
+      "id": "9",
+      "name": "Dosa",
+      "unitPrice": "20",
+      "quantity": "11"
     }
   ]
 }

@@ -1,7 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable, MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
+import { ProductEntryComponent } from '../product-entry/product-entry.component';
 import { ProductService } from '../product.service';
 import { Product } from './product.model';
 
@@ -20,7 +23,7 @@ export class ProductsComponent implements OnInit {
 
   displayedColumns = ['id', 'name', 'unitPrice', 'quantity', 'action'];
 
-  constructor(private productService : ProductService) { }
+  constructor(private productService ?: ProductService,public dialog?: MatDialog,private router ?: Router) { }
 
   ngOnInit(): void {
     this.getAllProducts();
@@ -62,6 +65,20 @@ export class ProductsComponent implements OnInit {
         }
       )
     }
+  }
+
+  openPopup(id : number) : void {
+    const dialogRef = this.dialog.open(ProductEntryComponent, {
+      width: '650px',
+      data: {id: id},
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
+      if(result === -1){
+        this.getAllProducts();
+      }      
+    });
   }
 
 }
