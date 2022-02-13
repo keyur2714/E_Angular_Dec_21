@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>
+        {{title | uppercase | lowercase}}
+      </h1>
+    </div>
+    <div class="col">
+      {{dateOfBirth |date : 'dd-MMM-yyyy hh:mm:ss a' | uppercase}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      Salary : {{salary |currency : cur}}
+    </div>
+    <div class="col">
+      Percentage : {{per |percent : '2.6'}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      {{name | welcome}}
+    </div>
+    <div class="col">
+      {{name1 | welcome}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      {{person | json}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      Account No : {{person.accountNo |mask : '#' : 4}}
+    </div>
+    <div class="col">
+      Mobile No : {{person.mobileNo |mask : '*' : 3}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      Async Pipe : {{numberObservable | async}}
+    </div>
+  </div>
+</div>
