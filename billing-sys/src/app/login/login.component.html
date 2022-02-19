@@ -1,0 +1,29 @@
+<form #frm=ngForm (ngSubmit)="login()">
+    <div class="row m-1">
+        <div class="col-sm-4">
+            <sup>*</sup>Username :
+        </div>
+        <div class="col-sm-4">
+            <input type="text" name="username" class="form-control" [(ngModel)]="userName" required #username=ngModel>
+        </div>
+        <div class="col-sm-4" *ngIf="username.invalid && username.touched">
+            Username is Mandatory field.
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-sm-4">
+            <sup>*</sup>Password :
+        </div>
+        <div class="col-sm-4">
+            <input type="password" name="password" class="form-control" [(ngModel)]="passWord" required #password=ngModel>
+        </div>
+        <div class="col-sm-4" *ngIf="password.invalid && password.touched">
+            Password is Mandatory field.
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-sm-8 text-center">
+            <button class="btn btn-info">Login</button>
+        </div>
+    </div>
+</form>
