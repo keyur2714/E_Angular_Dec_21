@@ -1,0 +1,68 @@
+<form [formGroup]="itemEntryForm" (ngSubmit)="save()">
+    <div class="row m-1">
+        <div class="col-sm-4">
+            Item # :
+        </div>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="id" formControlName="id">
+        </div>
+        <div class="col-sm-4" *ngIf="itemEntryForm.get('id').invalid && itemEntryForm.get('id').touched">
+            Item Id is mandatory field.
+        </div>
+    </div>
+    <div class="row m-1">
+        <div class="col-sm-4">
+            Item Name :
+        </div>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="itemName" formControlName="itemName">
+        </div>
+        <div class="col-sm-4" *ngIf="itemEntryForm.get('itemName').invalid && itemEntryForm.get('itemName').touched">
+            Item Name is mandatory field.
+        </div>
+    </div>
+
+    <div class="row m-1">
+        <div class="col-sm-4">
+            Item Code :
+        </div>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="itemCode" formControlName="itemCode">
+        </div>
+        <div class="col-sm-4" *ngIf="itemEntryForm.get('itemCode').invalid && itemEntryForm.get('itemCode').touched">
+            Item Code is mandatory field.
+        </div>
+    </div>
+
+    <div class="row m-1">
+        <div class="col-sm-4">
+            Price :
+        </div>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="price" formControlName="price">
+        </div>
+        <div class="col-sm-4" *ngIf="itemEntryForm.get('price').invalid && itemEntryForm.get('price').touched">
+            <span *ngIf="itemEntryForm.get('price').errors['required']">Item Price is mandatory field.</span>
+            <span *ngIf="itemEntryForm.get('price').errors['pattern']">Item Price is Invalid.</span>
+        </div>
+    </div>
+
+    <div class="row m-1">
+        <div class="col-sm-4">
+            Discount :
+        </div>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" name="discount" formControlName="discount">
+        </div>
+        <div class="col-sm-4" *ngIf="itemEntryForm.get('discount').invalid && itemEntryForm.get('discount').touched">
+            Discount is mandatory field.
+        </div>
+    </div>
+
+    <div class="row m-1">
+        <div class="col-sm-4">
+            <button class="btn btn-info">Submit</button>
+        </div>        
+    </div>    
+
+</form>

@@ -1,85 +1,92 @@
 {
-	"users":[
-		{
-			"id":1,
-			"username":"keyur123",
-			"password":"India@111",
-			"mobileNo":"7387029672",
-			"email":"keyurjava27@gmail.com",
-			"role":"ADMIN",
-			"token":"ABCDEFG111111"	
-		},
-		{
-			"id":2,
-			"username":"denish123",
-			"password":"India@222",
-			"mobileNo":"7387029123",
-			"email":"denishjava26@gmail.com",
-			"role":"USER",
-			"token":"ABCDEFG222222"	
-		}
-	],
-	"items":[
-		{
-			"id":1,
-			"itemName":"Massala Tea",	
-			"itemCode":"MTEA",	
-			"price":15,
-			"discount":0
-		},
-		{
-			"id":2,
-			"itemName":"Ginger Tea",	
-			"itemCode":"GTEA",	
-			"price":10,
-			"discount":0
-		},
-		{
-			"id":3,
-			"itemName":"Hot Coffee",	
-			"itemCode":"HCOFFEE",	
-			"price":20,
-			"discount":0
-		},
-		{
-			"id":4,
-			"itemName":"Cold Coffee",	
-			"itemCode":"CCOFFEE",	
-			"price":30,
-			"discount":5
-		},
-		{
-			"id":5,
-			"itemName":"Vada Pav",	
-			"itemCode":"VP",	
-			"price":15,
-			"discount":0
-		},
-		{
-			"id":6,
-			"itemName":"Cream Roll",	
-			"itemCode":"CR",	
-			"price":10,
-			"discount":0
-		}
-	],
-	"orders":[
-		{
-			"id":1,
-			"mobileNo":"9898012121",
-			"items":[
-				{
-					"itemId":2,
-					"qty":3,
-					"price":30
-				},
-				{
-					"itemId":5,
-					"qty":3,
-					"price":45
-				}
-			],
-			"total":75
-		}
-	]
+  "users": [
+    {
+      "id": 1,
+      "username": "keyur123",
+      "password": "India@111",
+      "mobileNo": "7387029672",
+      "email": "keyurjava27@gmail.com",
+      "role": "ADMIN",
+      "token": "ABCDEFG111111"
+    },
+    {
+      "id": 2,
+      "username": "denish123",
+      "password": "India@222",
+      "mobileNo": "7387029123",
+      "email": "denishjava26@gmail.com",
+      "role": "USER",
+      "token": "ABCDEFG222222"
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "itemName": "Massala Tea",
+      "itemCode": "MTEA",
+      "price": 15,
+      "discount": 0
+    },
+    {
+      "id": 2,
+      "itemName": "Ginger Tea",
+      "itemCode": "GTEA",
+      "price": 10,
+      "discount": 0
+    },
+    {
+      "id": 3,
+      "itemName": "Hot Coffee",
+      "itemCode": "HCOFFEE",
+      "price": 20,
+      "discount": 0
+    },
+    {
+      "id": 4,
+      "itemName": "Cold Coffee",
+      "itemCode": "CCOFFEE",
+      "price": 30,
+      "discount": 5
+    },
+    {
+      "id": 5,
+      "itemName": "Vada Pav",
+      "itemCode": "VP",
+      "price": 15,
+      "discount": 0
+    },
+    {
+      "id": 6,
+      "itemName": "Cream Roll",
+      "itemCode": "CR",
+      "price": 10,
+      "discount": 0
+    },
+    {
+      "id": "7",
+      "itemName": "Vej Puff",
+      "itemCode": "VJP",
+      "price": "20",
+      "discount": 0
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "mobileNo": "9898012121",
+      "items": [
+        {
+          "itemId": 2,
+          "qty": 3,
+          "price": 30
+        },
+        {
+          "itemId": 5,
+          "qty": 3,
+          "price": 45
+        }
+      ],
+      "total": 75
+    }
+  ]
 }
