@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Item } from './item.model';
@@ -12,8 +12,16 @@ export class ItemService {
 
   constructor(private httpClient : HttpClient) { }
 
-  listItems() : Observable<Item[]>{
-    return this.httpClient.get<Item[]>(this.appUrl+"/items");
+  listItems() : Observable<Item[]>{    
+    const header = new HttpHeaders();
+    header.set("Authorization","Bearer 11111")
+    .set('content-type', 'application/json');
+
+    const requestOptions = {                                                                                                                                                                                 
+      headers: header, 
+    };
+    
+    return this.httpClient.get<Item[]>(this.appUrl+"/items",requestOptions);
   }
 
   save(item : Item) : Observable<Item>{

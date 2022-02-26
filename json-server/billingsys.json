@@ -68,6 +68,13 @@
       "itemCode": "VJP",
       "price": "20",
       "discount": 0
+    },
+    {
+      "id": "8",
+      "itemName": "Green Tea",
+      "itemCode": "GTEA",
+      "price": "10",
+      "discount": 0
     }
   ],
   "orders": [

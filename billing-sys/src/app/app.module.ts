@@ -11,10 +11,11 @@ import { LogoutComponent } from './logout/logout.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserComponent } from './user/user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ItemsComponent } from './admin/items/items.component';
 import { ItemsEntryComponent } from './admin/items-entry/items-entry.component';
 import { GenerateBillComponent } from './user/generate-bill/generate-bill.component';
+import { AuthInterceptor } from './auth/auth-interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,9 @@ import { GenerateBillComponent } from './user/generate-bill/generate-bill.compon
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {provide : HTTP_INTERCEPTORS , useClass : AuthInterceptor,multi : true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
