@@ -1,4 +1,4 @@
-import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse } from "@angular/common/http";
+import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest, HttpResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
@@ -21,6 +21,8 @@ export class AuthInterceptor implements HttpInterceptor{
             if (event instanceof HttpResponse) {
                 console.log("Hi...."+event.status+" "+JSON.stringify(event.body));
                 event = event.clone({body: this.modifyBody(event.body)});
+            }else if(event instanceof HttpErrorResponse){
+                throw "Error";
             }
             return event;
         }));
