@@ -14,7 +14,7 @@ import { STATE_ANIMATION } from './animations/simple-state.animations';
   ]
 })
 export class AppComponent {
-  title = 'animation-demo';
+  title = 'Animation Demo';
 
   state : string = 'start';
   onOffState : string = 'on';
@@ -30,5 +30,10 @@ export class AppComponent {
   roundAntiClockTrigger = 'in'; 
   @HostBinding('style.display')   display = 'block';
   @HostBinding('style.position')  position = 'absolute';
+
+
+  sum(num1 : number,num2 : number) : number {
+    return num1 + num2;
+  }
 
 }

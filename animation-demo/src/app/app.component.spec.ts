@@ -1,4 +1,5 @@
 import { TestBed } from '@angular/core/testing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -7,6 +8,9 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent
       ],
+      imports :[
+        BrowserAnimationsModule
+      ]
     }).compileComponents();
   });
 
@@ -19,13 +23,20 @@ describe('AppComponent', () => {
   it(`should have as title 'animation-demo'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('animation-demo');
+    expect(app.title).toEqual('Animation Demo');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('animation-demo app is running!');
+    expect(compiled.querySelector('h1').textContent).toContain('Animation Demo');
   });
+
+  it('check sum function', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    const app = fixture.componentInstance;
+    let result = app.sum(11,11);
+    expect(result).toEqual(22);
+  })
 });
